@@ -1,5 +1,7 @@
 'use strict'
 
+const sequelize = require("sequelize");
+
 module.exports = {
   async up (queryInterface, Sequelize) {
     await queryInterface.createTable(
@@ -17,25 +19,22 @@ module.exports = {
         },
         price:{
           type: Sequelize.INTEGER,
-          primaryKey: true,
-          unique: true,
-          allowNull: false,
-        },
-        weight: {
-          type: Sequelize.INTEGER,
         },
         stocks:{
-          type: Sequelize.INTEGER,
-          allowNull: true,
+          type: Sequelize.INTEGER
+        },
+        weight: {
+          type: Sequelize.STRING,
+        },
+        status: {
+          type: Sequelize.STRING
         },
         created_at: {
           type: Sequelize.DATE,
-          allowNull: false,
         },
         updated_at: {
           type: Sequelize.DATE,
-          allowNull: false,
-        },
+          },
         deleted_at: {
           type: Sequelize.DATE,
         },

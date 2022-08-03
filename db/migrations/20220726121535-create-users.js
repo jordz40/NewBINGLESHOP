@@ -15,19 +15,22 @@ module.exports = {
           allowNull: false
         },
         name: {
-          type: sequelize.INTEGER
+          type: sequelize.STRING
         },
         address: {
-          type: sequelize.INTEGER
+          type: sequelize.STRING
         },
         password: {
-          type: sequelize.INTEGER
+          type: sequelize.STRING
         },
         phone: {
-          type: STRING
+          type: sequelize.STRING
         },
         email: {
-          type: sequelize.INTEGER
+          type: sequelize.STRING
+        },
+        gender: {
+          type: sequelize.STRING
         },
         created_at: {
           type: sequelize.DATE,
@@ -39,7 +42,7 @@ module.exports = {
         },
         deleted_at: {
           type: sequelize.DATE,
-          default: new Date()
+
         },
       }
     )
